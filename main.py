@@ -10,7 +10,8 @@ def eit(x):
 
 xrange = range
 
-x = pow(10, 25)
+# x = pow(10, 25)
+x = 100
 
 aa = (2 * x + pow(-1, x - 1)) / 6
 a = math.trunc(aa)
@@ -23,8 +24,8 @@ sum = 0
 k = 0
 t = 0
 
-for j in xrange(8, n):
-    for i in xrange(1, m):
+for j in range(8, n):
+    for i in range(1, m):
         r = eit((4 * j - ((-1) ^ j) + ((2 * i + 1) * pow(-1, i + j) + ((2 * i - 1) * pow(-1, i) - (12 * i * i) + 5) / (
                 12 * i + 6 - (2 * pow(-1, i))))))
         k = k + r
@@ -32,5 +33,5 @@ for j in xrange(8, n):
     k = 0
 
 pp = (2 * x + pow(-1, x) - 6 * sum + 5) / 6
-p = round(pp, 0)
+p = math.trunc(pp)
 print("valor de pi(x) = ", p)
